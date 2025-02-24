@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div class="rain-container">
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+    <div class="rain"></div>
+  </div>
+  <main class="page">
+    <section class="registration">
+      <article class="sign-up">
+        <h1>Get Started Now</h1>
+        <form class="sign-up-list" id="sign-up">
+          <label for="name">
+            <h2>Name</h2>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </label>
+          <label for="email">
+            <h2>Email address</h2>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </label>
+          <label for="password">
+            <h2>Password</h2>
+            <input type="password" id="password" name="password" minlength="8" placeholder="Password" required>
+          </label>
+          <label for="checkbox" class="checkbox-label">
+            <input type="checkbox" name="checkbox" id="checkbox" required>
+            <h4>I agree to the terms & policy</h4>
+          </label>
+          <button class="sign-up-button" type="submit">Sign Up</button>
+          <span class="or">or</span>
+          <button class="button-google" type="button">Sign in with Google</button>
+          <button class="button-apple" type="button">Sign in with Apple</button>
+          <span class="have-an-account">Have an account? <a href="#">Sign In</a></span>
+        </form>
+      </article>
+    </section>
+    <section class="image">
+      <img src="/images/rain.webp" alt="Placeholder Image">
+    </section>
+  </main>
+</body>
+
+</html>

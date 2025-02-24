@@ -1,0 +1,343 @@
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  background-color: #222;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rain-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.rain {
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  animation: fall linear infinite;
+}
+
+/* Создаем множество капель */
+.rain:nth-child(1) {
+  left: 10%;
+  animation-duration: 0.8s;
+  animation-delay: 0s;
+}
+.rain:nth-child(2) {
+  left: 20%;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+.rain:nth-child(3) {
+  left: 30%;
+  animation-duration: 1.2s;
+  animation-delay: 0.4s;
+}
+.rain:nth-child(4) {
+  left: 40%;
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+}
+.rain:nth-child(5) {
+  left: 50%;
+  animation-duration: 1.1s;
+  animation-delay: 0.3s;
+}
+.rain:nth-child(6) {
+  left: 60%;
+  animation-duration: 1.3s;
+  animation-delay: 0.5s;
+}
+.rain:nth-child(7) {
+  left: 70%;
+  animation-duration: 0.7s;
+  animation-delay: 0.2s;
+}
+.rain:nth-child(8) {
+  left: 80%;
+  animation-duration: 1.2s;
+  animation-delay: 0.4s;
+}
+.rain:nth-child(9) {
+  left: 90%;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Грид для всей страницы */
+.page {
+  display: grid;
+  grid-template-columns: 404px minmax(0, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Секция регистрации */
+.registration {
+  width: 404px;
+  height: auto;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  background: linear-gradient(45deg, #1e1f1ed8, #cce5ff68, #ea3a3a86);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite alternate;
+  padding: 20px; /* для отступов */
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.sign-up h1 {
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sign-up-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sign-up-list label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sign-up-list h2 {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.sign-up-list input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  transition: border-color 0.3s;
+  animation: neonPulse 4s infinite;
+}
+
+@keyframes neonPulse {
+  0%,
+  100% {
+    border-color: #020202;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
+
+.sign-up-list input:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+/* Чекбокс */
+.checkbox-label {
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-label h4 {
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  accent-color: #2e7d32;
+}
+
+/* Кнопка Sign Up */
+.sign-up-button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #93b4f154;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.sign-up-button:hover {
+  background-color: #000000;
+  transition: 2s;
+  color: #fff;
+}
+
+/* Разделитель "or" */
+.or {
+  text-align: center;
+  font-size: 16px;
+  color: #000;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+/* Кнопки Google и Apple */
+.button-google,
+.button-apple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  width: 100%;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.button-google {
+  background-color: #fff;
+  color: #333;
+}
+
+.button-google::before {
+  content: url(/images/icons8-google-16.png);
+  margin-right: 8px;
+}
+
+.button-google:hover {
+  background-color: #f8f9fa;
+  border-color: #ccc;
+}
+
+.button-apple {
+  background-color: #000;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.button-apple::before {
+  content: url(/images/icons8-ос-mac-16.png);
+  margin-right: 8px;
+}
+
+.button-apple:hover {
+  background-color: #333;
+}
+
+/* Текст "Have an account?" */
+.have-an-account {
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+}
+
+.have-an-account a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.have-an-account a:hover {
+  text-decoration: underline;
+}
+
+/* Секция изображения */
+.image {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  background-color: #f9f9f9;
+  border-radius: 5%;
+  overflow: hidden;
+  height: 638px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: minmax(0, 1fr); /* Одна колонка */
+  }
+
+  .registration {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Сохраняем закругления на узких экранах */
+  }
+
+  .image {
+    display: none; /* Скрываем изображение */
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up h1 {
+    font-size: clamp(20px, 5vw, 24px);
+  }
+
+  .sign-up-list input,
+  .sign-up-button,
+  .button-google,
+  .button-apple {
+    font-size: clamp(12px, 4vw, 14px);
+  }
+}
