@@ -254,7 +254,7 @@ body {
 }
 
 .button-google::before {
-  content: url(/images/icons8-google-16.png);
+  content: url("../images/icons8-google-16.png");
   margin-right: 8px;
 }
 
@@ -270,7 +270,7 @@ body {
 }
 
 .button-apple::before {
-  content: url(/images/icons8-ос-mac-16.png);
+  content: url("../images/icons8-ос-mac-16.png");
   margin-right: 8px;
 }
 
